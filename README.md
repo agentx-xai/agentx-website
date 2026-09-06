@@ -1,5 +1,15 @@
 # AgentX Website
 
+<p align="center"><img src="https://raw.githubusercontent.com/agentx-xai/.github/main/profile/agentx-mark.svg" alt="AgentX" width="88"></p>
+
+<p align="center">
+  <a href="https://github.com/agentx-xai/agentx-website/actions/workflows/deploy.yml"><img src="https://github.com/agentx-xai/agentx-website/actions/workflows/deploy.yml/badge.svg" alt="Website deployment"></a>
+  <a href="https://github.com/agentx-xai/agentx-website/releases"><img src="https://img.shields.io/github/v/release/agentx-xai/agentx-website" alt="Latest release"></a>
+  <a href="https://github.com/agentx-xai/agentx-website/blob/main/LICENSE"><img src="https://img.shields.io/github/license/agentx-xai/agentx-website" alt="MIT license"></a>
+</p>
+
+<p align="center">AgentX 官方产品网站和 Registry Web Console。</p>
+
 AgentX 官方产品官网，展示声明式管理 AI Agent 环境的工作方式，并提供 CLI、Registry 和 Web Console 的入口。
 
 官网地址：<https://agentx-xai.github.io/agentx-website/>
