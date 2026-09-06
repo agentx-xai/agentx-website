@@ -69,3 +69,7 @@ https://agentx-xai.github.io/agentx-website/
 | `console/` | Registry Web Console |
 | `PRODUCT.md` | 产品定义、使用方式和路线 |
 | `.github/workflows/deploy.yml` | GitHub Pages 构建与部署 |
+
+## 参与贡献
+
+欢迎通过 [Issues](https://github.com/agentx-xai/agentx-website/issues) 报告网站或 Console 问题，通过 [Pull Requests](https://github.com/agentx-xai/agentx-website/pulls) 提交改进。提交前请阅读 [`CONTRIBUTING.md`](CONTRIBUTING.md)；安全问题请使用 [`SECURITY.md`](SECURITY.md) 的私密报告流程。本仓库使用 [MIT License](LICENSE)。
