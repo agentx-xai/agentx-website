@@ -16,7 +16,7 @@ const features = [
     <header class="topbar">
       <a class="brand" href="#top"><span class="brand-mark">AX</span><span>AgentX</span></a>
       <nav aria-label="主导航"><a href="#workflow">工作方式</a><a href="#features">能力</a><a href="#start">开始使用</a></nav>
-      <a class="nav-cta" href="https://github.com/agentx-ai" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+      <a class="nav-cta" href="https://github.com/agentx-xai" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
     </header>
 
     <main id="top">
@@ -25,7 +25,7 @@ const features = [
           <p class="eyebrow">DECLARATIVE CONTROL FOR AI AGENTS</p>
           <h1>把 Agent 环境，<em>交给一份 Manifest。</em></h1>
           <p class="hero-lede">AgentX 让 Skills、Rules、MCP、版本和团队策略有一个可复现的来源。换机器、扩团队、修 Drift，都从同一个事实开始。</p>
-          <div class="hero-actions"><a class="button button-primary" href="#start">开始使用 <span>↓</span></a><a class="button button-quiet" href="https://github.com/agentx-ai/agentx-cli" target="_blank" rel="noreferrer">查看代码 <span>↗</span></a></div>
+          <div class="hero-actions"><a class="button button-primary" href="#start">开始使用 <span>↓</span></a><a class="button button-quiet" href="https://github.com/agentx-xai/agentx-cli" target="_blank" rel="noreferrer">查看代码 <span>↗</span></a></div>
           <div class="hero-meta"><span><i class="status-dot"></i> Local-first</span><span>Codex · Claude Code</span><span>Open source</span></div>
         </div>
         <div class="control-plane" aria-label="AgentX 控制平面示意图">
@@ -55,6 +55,6 @@ const features = [
 <span class="success">✓ installed 4 skills for codex, claude</span>
 <span class="success">✓ environment is reproducible</span></pre></div></section>
     </main>
-    <footer><a class="brand" href="#top"><span class="brand-mark">AX</span><span>AgentX</span></a><span>Declarative environments for AI agents.</span><a href="https://github.com/agentx-ai" target="_blank" rel="noreferrer">Open source on GitHub ↗</a></footer>
+    <footer><a class="brand" href="#top"><span class="brand-mark">AX</span><span>AgentX</span></a><span>Declarative environments for AI agents.</span><a href="https://github.com/agentx-xai" target="_blank" rel="noreferrer">Open source on GitHub ↗</a></footer>
   </div>
 </template>
