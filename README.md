@@ -1,16 +1,58 @@
 # AgentX Website
 
-AgentX 官方产品官网，使用 Vue 3 + Vite 构建，通过 GitHub Actions 部署到 GitHub Pages。
+AgentX 官方产品官网，展示声明式管理 AI Agent 环境的工作方式，并提供 CLI、Registry 和 Web Console 的入口。
+
+官网地址：<https://agentx-xai.github.io/agentx-website/>
+
+## 页面内容
+
+- 产品定位：Manifest、Skills、Rules、MCP、Lockfile 和 Drift
+- 使用流程：Declare、Lock、Reconcile
+- 能力说明：Local-first、团队 Workspace、内容哈希和审计
+- 快速开始：CLI 初始化、锁定和安装命令
+- GitHub 入口：[`agentx-cli`](https://github.com/agentx-xai/agentx-cli)、[`agentx-server`](https://github.com/agentx-xai/agentx-server)
+
+完整中文产品文档见 [`PRODUCT.md`](PRODUCT.md)。
 
 ## 本地运行
+
+要求 Node.js 20+：
 
 ```bash
 npm install
 npm run dev
 ```
 
+默认 Vite 开发服务会输出本地地址。生产构建和预览：
+
+```bash
+npm run build
+npm run preview
+```
+
+控制台位于 [`console/`](console/)：
+
+```bash
+cd console
+npm ci
+npm run dev
+```
+
 ## 发布
 
-将仓库默认分支设为 `main`，在 GitHub 仓库设置中把 Pages 的 Source 设为 **GitHub Actions**。之后每次 push 到 `main` 都会自动构建并发布。
+仓库的 GitHub Actions 会在 `main` 分支 push 后执行 `npm ci`、`npm run build`，并把 `dist/` 发布到 GitHub Pages。首次启用时，在仓库 Settings → Pages 中将 Source 设置为 **GitHub Actions**。
 
-官网文案与完整使用说明见 [产品文档](./PRODUCT.md)。
+也可以手动触发 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)。部署后的页面地址由 GitHub Pages 提供，当前为：
+
+```text
+https://agentx-xai.github.io/agentx-website/
+```
+
+## 目录
+
+| 路径 | 用途 |
+| --- | --- |
+| `src/` | 官网 Vue 页面和样式 |
+| `console/` | Registry Web Console |
+| `PRODUCT.md` | 产品定义、使用方式和路线 |
+| `.github/workflows/deploy.yml` | GitHub Pages 构建与部署 |
