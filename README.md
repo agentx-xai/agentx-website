@@ -49,6 +49,8 @@ npm run dev
 https://agentx-xai.github.io/agentx-website/
 ```
 
+推送形如 `v0.1.2` 的 Tag 会触发 [`.github/workflows/release.yml`](.github/workflows/release.yml)，先构建网站，再创建 GitHub Release 并上传 `dist/` 压缩包。
+
 ## 目录
 
 | 路径 | 用途 |
