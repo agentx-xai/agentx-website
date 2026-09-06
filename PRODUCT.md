@@ -2,7 +2,7 @@
 
 ## 1. 产品概述
 
-AgentX 用一份声明式配置管理 AI Agent 的工作环境。它把 Skills、Rules、MCP 服务、版本和团队策略集中描述，再生成 Codex、Claude Code 等 Agent 可以直接使用的本地配置。
+AgentX 用一份声明式配置管理 AI Agent 的工作环境。它把 Skills、Rules、MCP 服务、版本和团队策略集中描述，再生成 Codex、Claude Code、Cursor、Gemini CLI、Copilot、Cline 和 Grok Build 等 Agent 可以直接使用的本地配置。
 
 AgentX 解决的是“换一台机器后，如何恢复同一套 Agent 环境”，而不是实时同步个人目录。它不会复制 API Key、登录会话、凭据、历史记录或缓存。
 
@@ -12,7 +12,7 @@ AgentX 解决的是“换一台机器后，如何恢复同一套 Agent 环境”
 - **Registry API**：保存团队 Workspace、成员、Manifest、不可变 Artifact、设备状态和审计记录。
 - **Web Console**：管理 Workspace、成员、Registry、Manifest、策略、设备和 Drift。
 
-当前优先支持 Codex 和 Claude Code。Cursor、Copilot 等适配器不属于当前稳定能力范围。
+当前 CLI 已支持 Codex、Claude Code、Cursor、Windsurf、Gemini CLI、GitHub Copilot、Cline 和 Grok Build。
 
 ## 2. 核心概念
 
@@ -110,7 +110,7 @@ agentx diff
 
 | 命令 | 用途 |
 | --- | --- |
-| `agentx doctor` | 检查 Codex、Claude Code 和本地目录 |
+| `agentx doctor` | 检查支持的 Agent 命令或配置目录 |
 | `agentx lock` | 根据当前来源生成或更新 `agentx.lock` |
 | `agentx install` | 安装 Skills、Rules 和 MCP 配置 |
 | `agentx diff` | 比较期望内容与本机安装内容 |
@@ -433,4 +433,3 @@ agentx install --yes --frozen
 ### 如何判断服务是否适合上线
 
 至少完成一次 staging 验收、Artifact 下载校验、备份恢复、OIDC JWKS 轮换和第二台设备同步回滚演练，再根据真实试用反馈决定计费、通知和新的 Agent adapter。
-

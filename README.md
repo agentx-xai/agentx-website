@@ -10,6 +10,7 @@ AgentX 官方产品官网，展示声明式管理 AI Agent 环境的工作方式
 - 使用流程：Declare、Lock、Reconcile
 - 能力说明：Local-first、团队 Workspace、内容哈希和审计
 - 快速开始：CLI 初始化、锁定和安装命令
+- 支持 Codex、Claude Code、Cursor、Windsurf、Gemini CLI、Copilot、Cline 和 Grok Build
 - GitHub 入口：[`agentx-cli`](https://github.com/agentx-xai/agentx-cli)、[`agentx-server`](https://github.com/agentx-xai/agentx-server)
 
 完整中文产品文档见 [`PRODUCT.md`](PRODUCT.md)。
