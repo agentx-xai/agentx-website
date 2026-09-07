@@ -29,7 +29,7 @@ cd console
 npm ci
 npm run dev
 npm run build
-npm run test:e2e
+npm run e2e
 ```
 
 ## Release
