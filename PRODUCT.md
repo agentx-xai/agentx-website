@@ -1,5 +1,7 @@
 # AgentX 产品文档
 
+[English](PRODUCT.en.md) | 中文
+
 ## 1. 产品概述
 
 AgentX 用一份声明式配置管理 AI Agent 的工作环境。它把 Skills、Rules、MCP 服务、版本和团队策略集中描述，再生成 Codex、Claude Code、Cursor、Gemini CLI、Copilot、Cline 和 Grok Build 等 Agent 可以直接使用的本地配置。

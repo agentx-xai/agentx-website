@@ -1,5 +1,7 @@
 # AgentX Website
 
+[English](README.en.md) | 中文
+
 <p align="center"><img src="https://raw.githubusercontent.com/agentx-xai/.github/main/profile/agentx-mark.svg" alt="AgentX" width="88"></p>
 
 <p align="center">
@@ -23,7 +25,7 @@ AgentX 官方产品官网，展示声明式管理 AI Agent 环境的工作方式
 - 支持 Codex、Claude Code、Cursor、Windsurf、Gemini CLI、Copilot、Cline 和 Grok Build
 - GitHub 入口：[`agentx-cli`](https://github.com/agentx-xai/agentx-cli)、[`agentx-server`](https://github.com/agentx-xai/agentx-server)
 
-完整中文产品文档见 [`PRODUCT.md`](PRODUCT.md)。
+完整中文产品文档见 [`PRODUCT.md`](PRODUCT.md)，English version见 [`PRODUCT.en.md`](PRODUCT.en.md)。
 
 ## 本地运行
 
@@ -59,7 +61,7 @@ npm run dev
 https://agentx-xai.github.io/agentx-website/
 ```
 
-推送形如 `v0.1.2` 的 Tag 会触发 [`.github/workflows/release.yml`](.github/workflows/release.yml)，先构建网站，再创建 GitHub Release 并上传 `dist/` 压缩包。
+推送形如 `v0.1.2` 的 Tag 会触发 [`.github/workflows/release.yml`](.github/workflows/release.yml)，先构建网站，再创建 GitHub Release 并上传 `dist/` 压缩包和 SHA-256 校验和。Tag 可通过 GitHub Actions 的 `Tag` workflow 从指定分支创建。
 
 ## 目录
 

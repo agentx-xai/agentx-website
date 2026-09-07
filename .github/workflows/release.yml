@@ -3,7 +3,7 @@ name: Release Website
 on:
   push:
     tags:
-      - "v*"
+      - "v*.*.*"
   workflow_dispatch:
     inputs:
       tag:
@@ -20,6 +20,16 @@ jobs:
     env:
       RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
     steps:
+      - name: Validate semantic version tag
+        env:
+          RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.-]+)?$ ]] || {
+            echo "release tags must use vX.Y.Z" >&2
+            exit 1
+          }
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
@@ -31,7 +41,9 @@ jobs:
       - run: npm run build
       - name: Package website
         run: tar -czf "agentx-website-$RELEASE_TAG.tar.gz" -C dist .
+      - name: Create checksum
+        run: sha256sum "agentx-website-$RELEASE_TAG.tar.gz" > SHA256SUMS
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --title "AgentX Website $RELEASE_TAG" --generate-notes "agentx-website-$RELEASE_TAG.tar.gz"
+        run: gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --title "AgentX Website $RELEASE_TAG" --generate-notes "agentx-website-$RELEASE_TAG.tar.gz" SHA256SUMS
