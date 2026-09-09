@@ -13,7 +13,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "5.2.1",
     "oidc-client-ts": "3.5.0",
-    "typescript": "5.7.3",
+    "typescript": "7.0.2",
     "vite": "6.4.3",
     "vue": "3.5.13"
   },
