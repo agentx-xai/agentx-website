@@ -11,7 +11,7 @@
     "e2e:staging": "playwright test --config playwright.staging.config.ts"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "5.2.1",
+    "@vitejs/plugin-vue": "6.0.8",
     "oidc-client-ts": "3.5.0",
     "typescript": "5.7.3",
     "vite": "6.4.3",
