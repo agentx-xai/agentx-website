@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -eu
+
+if [ -z "${AGENTX_DNS_RESOLVER:-}" ]; then
+    AGENTX_DNS_RESOLVER="$(awk '/^nameserver[[:space:]]+/ { print $2; exit }' /etc/resolv.conf)"
+    export AGENTX_DNS_RESOLVER
+fi
+
+if [ -z "${AGENTX_DNS_RESOLVER}" ]; then
+    echo "could not determine the container DNS resolver" >&2
+    exit 1
+fi

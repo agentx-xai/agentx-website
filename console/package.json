@@ -5,15 +5,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e:auth": "playwright test --config playwright.auth.config.ts",
+    "e2e:config": "playwright test --config playwright.config-check.config.ts",
+    "e2e:staging": "playwright test --config playwright.staging.config.ts"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "5.2.1",
+    "oidc-client-ts": "3.5.0",
     "typescript": "5.7.3",
     "vite": "6.4.3",
     "vue": "3.5.13"
   },
   "devDependencies": {
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "1.55.1"
   }
 }

@@ -26,3 +26,17 @@ jobs:
       - name: Build console
         working-directory: console
         run: npm ci && npm run build
+      - name: Build console image
+        run: docker build --build-arg VITE_API_URL='' --build-arg VITE_DEPLOYMENT_MODE=hosted --build-arg VITE_OIDC_ISSUER=https://id.example.invalid --build-arg VITE_OIDC_CLIENT_ID=agentx console
+      - name: Install Playwright Chromium
+        working-directory: console
+        run: npx playwright install --with-deps chromium
+      - name: Test console
+        working-directory: console
+        run: npm run e2e
+      - name: Test console OIDC lifecycle
+        working-directory: console
+        run: npm run e2e:auth
+      - name: Test hosted configuration
+        working-directory: console
+        run: npm run e2e:config
